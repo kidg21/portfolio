@@ -1,0 +1,11 @@
+.narrow {
+	max-width: 70%;
+}
+.center {
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.wrap {
+	flex-wrap: wrap;
+}
