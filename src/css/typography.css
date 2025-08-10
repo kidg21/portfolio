@@ -10,46 +10,38 @@ h5,
 h6 {
 	font-family: "Quicksand", sans-serif;
 	font-weight: 500;
-	font-optical-sizing: auto;
-	font-style: normal;
+	/* font-optical-sizing: auto; */
+	/* font-style: normal; */
 	margin: 0;
-	/* padding: 0; */
 }
 
-h1 {
-	/* font-size: 3.052rem; */
+/* h1 {
 	font-size: clamp(2.5rem, 3vw + 1rem, 3.052rem);
 }
 
 h2 {
-	/* font-size: 2.441rem; */
 	font-size: clamp(2rem, 2vw + 1rem, 2.441rem);
 }
 
 h3 {
-	/* font-size: 1.953rem; */
 	font-size: clamp(1.5rem, 2vw + 1rem, 1.953rem);
 }
 
 h4 {
-	/* font-size: 1.563rem; */
 	font-size: clamp(1.25rem, 3vw + 1rem, 1.563rem);
 }
 
 h5 {
-	/* font-size: 1.25rem; */
 	font-size: clamp(1rem, 2vw + 1rem, 1.25rem);
 }
 
 h6 {
-	/* font-size: 1rem; */
 	font-size: clamp(0.875rem, 1vw + 1rem, 1rem);
-}
+} */
 
 p {
 	font-family: "Lato", sans-serif;
-	/* font-size: 1rem; */
-	font-size: clamp (0.875rem, 1vw + 1rem, 1rem);
+	/* font-size: clamp (0.875rem, 1vw + 1rem, 1rem); */
 	font-weight: 400;
 	margin: 0.5em 0;
 }

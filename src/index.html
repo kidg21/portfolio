@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Portfolio</title>
+		<link
+			rel="stylesheet"
+			href="styles.css"
+		/>
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Quicksand:400,700|Lato:400,700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header>
+			<h1>My Portfolio</h1>
+			<section class="contact-info">
+				<p><strong>Name:</strong> Your Name</p>
+				<p><strong>Phone:</strong> (123) 456-7890</p>
+			</section>
+			<nav>
+				<ul>
+					<li
+						><a
+							href="#resume"
+							data-tab="resume"
+							>Resume</a
+						></li
+					>
+					<li
+						><a
+							href="#projects"
+							data-tab="projects"
+							>Projects</a
+						></li
+					>
+				</ul>
+			</nav>
+			<section class="social-links">
+				<a
+					href="https://www.linkedin.com"
+					target="_blank"
+					aria-label="LinkedIn"
+					><i
+						class="fab fa-linkedin"
+						aria-hidden="true"
+					></i
+				></a>
+				<a
+					href="https://github.com"
+					target="_blank"
+					aria-label="GitHub"
+					><i
+						class="fab fa-github"
+						aria-hidden="true"
+					></i
+				></a>
+				<a
+					href="mailto:your-email@example.com"
+					aria-label="Email"
+					><i
+						class="fas fa-envelope"
+						aria-hidden="true"
+					></i
+				></a>
+			</section>
+		</header>
+		<main>
+			<section
+				id="resume"
+				data-template="resume.html"
+			></section>
+			<section id="projects">
+				<h2>Projects</h2>
+				<div class="tabs">
+					<div class="tab-buttons">
+						<button
+							class="tab-button"
+							data-tab="project1"
+							>Project 1</button
+						>
+						<button
+							class="tab-button"
+							data-tab="project2"
+							>Project 2</button
+						>
+						<button
+							class="tab-button"
+							data-tab="project3"
+							>Project 3</button
+						>
+						<button
+							class="tab-button"
+							data-tab="project4"
+							>Project 4</button
+						>
+						<button
+							class="tab-button"
+							data-tab="project5"
+							>Project 5</button
+						>
+					</div>
+					<select
+						class="tab-dropdown"
+						aria-label="Select Project"
+					>
+						<option value="project1">Project 1</option>
+						<option value="project2">Project 2</option>
+						<option value="project3">Project 3</option>
+						<option value="project4">Project 4</option>
+						<option value="project5">Project 5</option>
+					</select>
+				</div>
+				<div
+					class="tab-content"
+					id="project1"
+					data-template="project1.html"
+				></div>
+				<div
+					class="tab-content"
+					id="project2"
+					data-template="project2.html"
+				></div>
+				<div
+					class="tab-content"
+					id="project3"
+					data-template="project3.html"
+				></div>
+				<div
+					class="tab-content"
+					id="project4"
+					data-template="project4.html"
+				></div>
+				<div
+					class="tab-content"
+					id="project5"
+					data-template="project5.html"
+				></div>
+			</section>
+		</main>
+		<div
+			id="lightbox"
+			class="lightbox"
+			style="display: none"
+		>
+			<span class="lightbox-close">&times;</span>
+			<img
+				class="lightbox-img"
+				src=""
+				alt="Full Size Image"
+			/>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>

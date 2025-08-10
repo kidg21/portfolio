@@ -1,0 +1,219 @@
+@import "css/resets.css";
+@import "css/variables.css";
+@import "css/utilities.css";
+@import "css/layout.css";
+@import "css/typography.css";
+
+body {
+	font-family: "Quicksand", "Lato", Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+}
+
+header {
+	background: #333;
+	color: #fff;
+	padding: 1rem 0;
+	text-align: center;
+}
+
+header h1 {
+	margin: 0;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+}
+
+nav ul li {
+	display: inline;
+	margin: 0 10px;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+nav ul li a.selected {
+	background: #fff;
+	color: #333;
+	border-radius: 4px;
+	padding: 0.25rem 0.75rem;
+}
+
+.tabs {
+	margin-top: 1rem;
+}
+
+.tab-button {
+	background: #f4f4f4;
+	border: 1px solid #ddd;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+	margin-right: 5px;
+}
+
+.tab-button.active {
+	background: #333;
+	color: #fff;
+	border-color: #333;
+}
+
+.tab-content {
+	display: none;
+	margin-top: 1rem;
+	border: 1px solid #ddd;
+	padding: 1rem;
+}
+
+.tab-content.active {
+	display: block;
+}
+
+.tab-content a.image-link {
+	cursor: pointer;
+	display: inline-block;
+}
+
+.tab-content a.image-link img {
+	pointer-events: none;
+	/* Prevents the image from capturing the click, so the anchor handles it */
+}
+
+.tab-content img.lightbox-trigger {
+	cursor: pointer;
+}
+
+.social-links a {
+	color: white;
+	font-size: 24px;
+	margin-right: 10px;
+	text-decoration: none;
+}
+
+.social-links a:hover {
+	color: #ccc;
+}
+
+/* Responsive Minor Third Typographic Scale */
+:root {
+	--font-size-base: 1rem; /* 16px */
+	--font-size-1: 0.889rem; /* ~14.2px */
+	--font-size-2: 1rem; /* 16px */
+	--font-size-3: 1.125rem; /* 18px */
+	--font-size-4: 1.266rem; /* 20.3px */
+	--font-size-5: 1.424rem; /* 22.8px */
+	--font-size-6: 1.602rem; /* 25.6px */
+	--font-size-7: 1.802rem; /* 28.8px */
+	--font-size-8: 2.027rem; /* 32.4px */
+}
+
+@media (max-width: 900px) {
+	:root {
+		--font-size-base: 0.95rem;
+		--font-size-1: 0.85rem;
+		--font-size-2: 0.95rem;
+		--font-size-3: 1.05rem;
+		--font-size-4: 1.18rem;
+		--font-size-5: 1.33rem;
+		--font-size-6: 1.5rem;
+		--font-size-7: 1.7rem;
+		--font-size-8: 1.9rem;
+	}
+}
+
+@media (max-width: 600px) {
+	:root {
+		--font-size-base: 0.9rem;
+		--font-size-1: 0.8rem;
+		--font-size-2: 0.9rem;
+		--font-size-3: 1rem;
+		--font-size-4: 1.1rem;
+		--font-size-5: 1.25rem;
+		--font-size-6: 1.4rem;
+		--font-size-7: 1.55rem;
+		--font-size-8: 1.7rem;
+	}
+}
+
+h1 {
+	font-size: var(--font-size-8);
+}
+h2 {
+	font-size: var(--font-size-7);
+}
+h3 {
+	font-size: var(--font-size-6);
+}
+h4 {
+	font-size: var(--font-size-5);
+}
+h5 {
+	font-size: var(--font-size-4);
+}
+h6 {
+	font-size: var(--font-size-3);
+}
+p,
+li,
+a,
+button,
+input,
+select,
+textarea {
+	font-size: var(--font-size-base);
+}
+
+@media (max-width: 600px) {
+	.tab-buttons {
+		display: none;
+	}
+	.tab-dropdown {
+		display: block;
+		width: 100%;
+		padding: 0.5rem;
+		font-size: 1rem;
+		margin-top: 1rem;
+	}
+}
+
+@media (min-width: 601px) {
+	.tab-dropdown {
+		display: none;
+	}
+	.tab-buttons {
+		display: block;
+	}
+}
+
+/* Lightbox styles */
+.lightbox {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.8);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+}
+.lightbox-img {
+	max-width: 90vw;
+	max-height: 80vh;
+	box-shadow: 0 0 20px #000;
+	border-radius: 8px;
+}
+.lightbox-close {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	color: #fff;
+	font-size: 2rem;
+	cursor: pointer;
+	z-index: 1001;
+}
