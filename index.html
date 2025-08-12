@@ -22,104 +22,118 @@
 	</head>
 	<body>
 		<header>
-			<h1>My Portfolio</h1>
-			<section class="contact-info">
-				<p><strong>Name:</strong> Your Name</p>
-				<p><strong>Phone:</strong> (123) 456-7890</p>
-			</section>
-			<nav>
-				<ul>
-					<li
-						><a
-							href="#resume"
-							data-tab="resume"
-							>Resume</a
-						></li
+			<div class="header-top">
+				<section class="name">
+					<h2>Greg Person</h2>
+					<h6 class="highlight">Tagline goes here</h6>
+				</section>
+				<section class="body">
+					<p class="description">
+						I'm lazy... I look for easy ways to do things. Of course he's a
+						happy little stone; we don't have any other kind! Just making little
+						X's, little criss-cross strokes.
+					</p>
+					<section class="social-links">
+						<div class="social-icons">
+							<a
+								href="https://www.linkedin.com"
+								target="_blank"
+								aria-label="LinkedIn"
+								><i
+									class="fab fa-linkedin"
+									aria-hidden="true"
+								></i
+							></a>
+							<a
+								href="https://github.com"
+								target="_blank"
+								aria-label="GitHub"
+								><i
+									class="fab fa-github"
+									aria-hidden="true"
+								></i
+							></a>
+							<a
+								href="mailto:your-email@example.com"
+								aria-label="Email"
+								><i
+									class="fas fa-envelope"
+									aria-hidden="true"
+								></i
+							></a>
+						</div>
+						<h6 class="phone"><strong>Phone:</strong> (123) 456-7890</h6>
+					</section>
+				</section>
+			</div>
+			<nav class="header-nav-row">
+				<div class="main-nav">
+					<a
+						href="#resume"
+						data-tab="resume"
+						>Resume&#39;</a
 					>
-					<li
-						><a
-							href="#projects"
-							data-tab="projects"
-							>Projects</a
-						></li
+					<a
+						href="#projects"
+						data-tab="projects"
+						>Portfolio</a
 					>
-				</ul>
+				</div>
 			</nav>
-			<section class="social-links">
-				<a
-					href="https://www.linkedin.com"
-					target="_blank"
-					aria-label="LinkedIn"
-					><i
-						class="fab fa-linkedin"
-						aria-hidden="true"
-					></i
-				></a>
-				<a
-					href="https://github.com"
-					target="_blank"
-					aria-label="GitHub"
-					><i
-						class="fab fa-github"
-						aria-hidden="true"
-					></i
-				></a>
-				<a
-					href="mailto:your-email@example.com"
-					aria-label="Email"
-					><i
-						class="fas fa-envelope"
-						aria-hidden="true"
-					></i
-				></a>
-			</section>
+			<div
+				class="header-tabs-row"
+				id="header-tabs-row"
+			>
+				<div class="tab-buttons">
+					<button
+						class="tab-button"
+						data-tab="project1"
+						>CommunityView</button
+					>
+					<button
+						class="tab-button"
+						data-tab="project2"
+						>Project 2</button
+					>
+					<button
+						class="tab-button"
+						data-tab="project3"
+						>Project 3</button
+					>
+					<button
+						class="tab-button"
+						data-tab="project4"
+						>Project 4</button
+					>
+					<button
+						class="tab-button"
+						data-tab="project5"
+						>Project 5</button
+					>
+				</div>
+				<select
+					id="project-dropdown"
+					class="tab-dropdown"
+					aria-label="Select Project"
+				>
+					<option value="resume">Resume&#39;</option>
+					<option value="project1">Project 1</option>
+					<option value="project2">Project 2</option>
+					<option value="project3">Project 3</option>
+					<option value="project4">Project 4</option>
+					<option value="project5">Project 5</option>
+				</select>
+			</div>
 		</header>
 		<main>
 			<section
 				id="resume"
 				data-template="resume.html"
 			></section>
+
 			<section id="projects">
-				<h2>Projects</h2>
-				<div class="tabs">
-					<div class="tab-buttons">
-						<button
-							class="tab-button"
-							data-tab="project1"
-							>Project 1</button
-						>
-						<button
-							class="tab-button"
-							data-tab="project2"
-							>Project 2</button
-						>
-						<button
-							class="tab-button"
-							data-tab="project3"
-							>Project 3</button
-						>
-						<button
-							class="tab-button"
-							data-tab="project4"
-							>Project 4</button
-						>
-						<button
-							class="tab-button"
-							data-tab="project5"
-							>Project 5</button
-						>
-					</div>
-					<select
-						class="tab-dropdown"
-						aria-label="Select Project"
-					>
-						<option value="project1">Project 1</option>
-						<option value="project2">Project 2</option>
-						<option value="project3">Project 3</option>
-						<option value="project4">Project 4</option>
-						<option value="project5">Project 5</option>
-					</select>
-				</div>
+				<!-- <h2>Projects</h2> -->
+				<!-- <div class="tabs"> -->
 				<div
 					class="tab-content"
 					id="project1"

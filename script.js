@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const tabButtons = document.querySelectorAll(".tab-button");
 	const tabContents = document.querySelectorAll(".tab-content");
 	const tabDropdown = document.querySelector(".tab-dropdown");
+	const headerTabsRow = document.getElementById("header-tabs-row");
 
 	// Load external template into tab-content or section
 	function loadTabContent(tabId) {
@@ -55,17 +56,20 @@ document.addEventListener("DOMContentLoaded", () => {
 			setActiveNav(target);
 			loadTabContent(target);
 
+			// Show/hide project subnav
+			if (headerTabsRow) {
+				if (target === "projects") {
+					headerTabsRow.style.display = "flex";
+					setActiveTab("project1");
+					if (tabDropdown) tabDropdown.value = "project1";
+				} else {
+					headerTabsRow.style.display = "none";
+				}
+			}
+
 			// Reset scroll position when switching between Resume and Projects
 			if (target === "resume" || target === "projects") {
 				window.scrollTo({ top: 0, behavior: "auto" });
-			}
-
-			// Debugging: Log when Projects tab is selected
-			if (target === "projects") {
-				console.log("Projects tab selected");
-				setActiveTab("project1");
-				console.log("Project 1 should now be active");
-				if (tabDropdown) tabDropdown.value = "project1";
 			}
 		});
 	});
@@ -75,6 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	document.getElementById("resume").style.display = "block";
 	setActiveNav("resume");
 	loadTabContent("resume");
+	if (headerTabsRow) headerTabsRow.style.display = "none";
 
 	tabButtons.forEach((button) => {
 		button.addEventListener("click", () => {

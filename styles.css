@@ -4,102 +4,19 @@
 @import "css/layout.css";
 @import "css/typography.css";
 
-body {
-	font-family: "Quicksand", "Lato", Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-	line-height: 1.6;
-}
-
-header {
-	background: #333;
-	color: #fff;
-	padding: 1rem 0;
-	text-align: center;
-}
-
-header h1 {
-	margin: 0;
-}
-
-nav ul {
-	list-style: none;
-	padding: 0;
-}
-
-nav ul li {
-	display: inline;
-	margin: 0 10px;
-}
-
-nav ul li a {
-	color: #fff;
-	text-decoration: none;
-}
-
-nav ul li a.selected {
-	background: #fff;
-	color: #333;
-	border-radius: 4px;
-	padding: 0.25rem 0.75rem;
-}
-
-.tabs {
-	margin-top: 1rem;
-}
-
-.tab-button {
-	background: #f4f4f4;
-	border: 1px solid #ddd;
-	padding: 0.5rem 1rem;
-	cursor: pointer;
-	margin-right: 5px;
-}
-
-.tab-button.active {
-	background: #333;
-	color: #fff;
-	border-color: #333;
-}
-
-.tab-content {
-	display: none;
-	margin-top: 1rem;
-	border: 1px solid #ddd;
-	padding: 1rem;
-}
-
-.tab-content.active {
-	display: block;
-}
-
-.tab-content a.image-link {
-	cursor: pointer;
-	display: inline-block;
-}
-
-.tab-content a.image-link img {
-	pointer-events: none;
-	/* Prevents the image from capturing the click, so the anchor handles it */
-}
-
-.tab-content img.lightbox-trigger {
-	cursor: pointer;
-}
-
-.social-links a {
-	color: white;
-	font-size: 24px;
-	margin-right: 10px;
-	text-decoration: none;
-}
-
-.social-links a:hover {
-	color: #ccc;
-}
-
 /* Responsive Minor Third Typographic Scale */
 :root {
+	/* Seattle Seahawks Color Palette */
+	--seahawks-navy: #1a2634; /* Muted navy */
+	--seahawks-actiongreen: #bfc5c9; /* Muted silver/grey */
+	--seahawks-college-navy: #2d3a4d; /* Muted college navy */
+	--seahawks-wolf-grey: #bfc5c9; /* Muted wolf grey */
+	--seahawks-neon-green: #b3c934; /* Muted neon green, more olive */
+	--seahawks-blue: #4e7c59; /* Muted blue/green */
+	--seahawks-lime: #8fae4d; /* Muted lime */
+	--seahawks-silver: #aeb2b5; /* Muted silver */
+	--seahawks-white: #ffffff;
+	--seahawks-dark: #101820;
 	--font-size-base: 1rem; /* 16px */
 	--font-size-1: 0.889rem; /* ~14.2px */
 	--font-size-2: 1rem; /* 16px */
@@ -109,6 +26,17 @@ nav ul li a.selected {
 	--font-size-6: 1.602rem; /* 25.6px */
 	--font-size-7: 1.802rem; /* 28.8px */
 	--font-size-8: 2.027rem; /* 32.4px */
+
+	/* Spacing scale: 0.875em base, 4 steps in both directions (shirt sizes) */
+	--space-xxs: 0.328em; /* 0.875em / 2^4 */
+	--space-xs: 0.438em; /* 0.875em / 2^3 */
+	--space-s: 0.583em; /* 0.875em / 2^2 */
+	--space-m: 0.75em; /* 0.875em / 2^1 */
+	--space: 0.875em; /* base */
+	--space-l: 1.094em; /* 0.875em * 2^1 */
+	--space-xl: 1.75em; /* 0.875em * 2^2 */
+	--space-xxl: 3.5em; /* 0.875em * 2^3 */
+	--space-xxxl: 7em; /* 0.875em * 2^4 */
 }
 
 @media (max-width: 900px) {
@@ -125,7 +53,7 @@ nav ul li a.selected {
 	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 	:root {
 		--font-size-base: 0.9rem;
 		--font-size-1: 0.8rem;
@@ -167,25 +95,202 @@ textarea {
 	font-size: var(--font-size-base);
 }
 
-@media (max-width: 600px) {
+body {
+	font-family: "Quicksand", "Lato", Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	line-height: 1.6;
+	display: flex;
+	flex-direction: column;
+	max-height: 100vh;
+	/* overflow: hidden; */
+}
+
+header {
+	background: var(--seahawks-navy);
+	/* border-bottom: 4px solid var(--seahawks-neon-green); */
+	color: var(--seahawks-white);
+	flex: none;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+	/* row-gap: var(--space-xl); */
+	/* box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); */
+	filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.2));
+}
+
+main {
+	flex: auto;
+	/* display: flex; */
+	flex-direction: column;
+	/* padding: var(--space-l) var(--space-xl); */
+	overflow: auto;
+}
+
+.header-top {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: stretch;
+	flex-wrap: wrap;
+	column-gap: var(--space-xxl);
+	padding: var(--space-l) var(--space-xl);
+	.name {
+		flex: none;
+	}
+	.body {
+		flex: auto;
+		display: flex;
+		flex-wrap: wrap;
+		/* align-items: baseline; */
+		.description {
+			/* min-width: 40ch; */
+			max-width: 80ch;
+			flex: 1 1 100%;
+		}
+		.social-links {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			flex: auto;
+
+			column-gap: var(--space-xxs);
+			.social-icons {
+				display: flex;
+				flex-direction: row;
+				gap: var(--space-l);
+				a {
+					color: var(--seahawks-neon-green);
+					font-size: 28px;
+					text-decoration: none;
+					transition: color 0.2s;
+					background: transparent;
+					&:hover {
+						color: var(--seahawks-blue);
+						background: var(--seahawks-actiongreen);
+					}
+				}
+			}
+			/* .phone { */
+			/* margin-top: var(--space-xs); */
+			/* color: var(--seahawks-white); */
+			/* font-size: var(--font-size-base); */
+			/* } */
+		}
+	}
+}
+
+.header-tabs-row {
+	background-color: var(--seahawks-white);
+	@media (max-width: 600px) {
+		padding: var(--space);
+	}
+}
+
+.header-nav-row {
+	/* margin-top: var(--space-m); */
+	display: flex;
+	justify-content: flex-start;
+}
+
+.main-nav {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	align-items: stretch;
+	gap: 0;
+	> a {
+		flex: 1 1 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--seahawks-white);
+		text-decoration: none;
+		/* padding: 0.75em 0; */
+		padding: var(--space-m);
+		margin: 0;
+		/* border-radius: 0; */
+		/* border: none; */
+		transition: background 0.2s, color 0.2s;
+		/* font-weight: 600; */
+		/* font-size: 1.1em; */
+		background: var(--seahawks-college-navy);
+		/* High contrast for selected/hover */
+		&.selected,
+		&:hover,
+		&:focus {
+			background: var(--seahawks-white);
+			color: var(--seahawks-dark);
+		}
+	}
+}
+
+/* .tabs {
+	margin-top: 1rem;
+} */
+
+.tab-button {
+	background: var(--seahawks-white);
+	border: none;
+	padding: var(--space) var(--space-xl);
+	cursor: pointer;
+	/* margin-right: 5px; */
+	&.active {
+		/* background: #333; */
+		/* background-color: var(--seahawks-neon-green); */
+		background-color: var(--seahawks-navy);
+		/* color: #fff; */
+		/* border-color: #333; */
+		color: var(--seahawks-neon-green);
+		font-weight: 700;
+		/* border-bottom: 2px solid var(--seahawks-neon-green); */
+		/* filter: drop-shadow(0px 4px 0px var(--seahawks-neon-green)); */
+	}
+}
+
+.tab-content {
+	display: none;
+	/* margin-top: 1rem; */
+	/* border: 1px solid #ddd; */
+	/* padding: 1rem; */
+	&.active {
+		display: block;
+	}
+	a.image-link {
+		cursor: pointer;
+		display: inline-block;
+		img {
+			pointer-events: none;
+			/* Prevents the image from capturing the click, so the anchor handles it */
+		}
+	}
+	img.lightbox-trigger {
+		cursor: pointer;
+	}
+}
+
+@media (max-width: 700px) {
 	.tab-buttons {
 		display: none;
 	}
 	.tab-dropdown {
 		display: block;
 		width: 100%;
-		padding: 0.5rem;
-		font-size: 1rem;
-		margin-top: 1rem;
+		padding: 0.75rem;
+		/* font-size: 1rem; */
+		/* margin-top: 1rem; */
 	}
 }
 
-@media (min-width: 601px) {
+@media (min-width: 701px) {
 	.tab-dropdown {
 		display: none;
 	}
 	.tab-buttons {
 		display: block;
+		display: inline-flex;
+		column-gap: var(--space);
 	}
 }
 

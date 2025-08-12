@@ -1,3 +1,6 @@
+.hide {
+	display: none !important;
+}
 .narrow {
 	max-width: 70%;
 }
@@ -8,4 +11,9 @@
 }
 .wrap {
 	flex-wrap: wrap;
+}
+.highlight {
+	color: var(--seahawks-neon-green);
+	font-weight: 700;
+	letter-spacing: 0.05em;
 }
