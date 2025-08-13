@@ -1,43 +1,191 @@
-/* html {
-	font-size: 14px;
-} */
-/* body {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	row-gap: 2rem;
-	font-family: "Lato", sans-serif;
+html {
+	font-size: 12px;
+}
+body {
+	font-family: "Quicksand", "Lato", Arial, sans-serif;
+	margin: 0;
+	padding: 0;
 	line-height: 1.6;
-	width: clamp(80%, 90%, 1200px);
-	margin: 4rem auto;
-	color: #333;
-} */
-.project {
 	display: flex;
 	flex-direction: column;
-	row-gap: 2rem;
+	max-height: 100vh;
+}
+
+header {
+	background: var(--seahawks-navy);
+	color: var(--seahawks-white);
+	flex: none;
 	width: 100%;
-	max-width: 60vw;
-	/* max-width: clamp(60vw, 70vw, 90vw); */
-	margin: auto;
-	padding: var(--space-xl) 0 var(--space-xxl);
-	/* padding: 4rem;
-	border: 1px solid #eee;
-	border-radius: 8px;
-	background-color: #fff;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
-	@media (max-width: 700px) {
-		max-width: 90vw;
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+	filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.2));
+
+	.header-top {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: stretch;
+		flex-wrap: wrap;
+		column-gap: var(--space-xxl);
+		padding: var(--space-l) var(--space-xl);
+		.name {
+			flex: none;
+		}
+		.body {
+			flex: auto;
+			display: flex;
+			flex-wrap: wrap;
+			.description {
+				max-width: 80ch;
+				flex: 1 1 100%;
+			}
+			.social-links {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-end;
+				flex: auto;
+
+				row-gap: var(--space-xxs);
+				.social-icons {
+					display: flex;
+					flex-direction: row;
+					column-gap: var(--space-xl);
+					a {
+						color: var(--seahawks-neon-green);
+						/* font-size: 28px; */
+						text-decoration: none;
+						transition: color 0.2s;
+						background: transparent;
+						&:hover {
+							color: var(--seahawks-blue);
+							/* background: var(--seahawks-actiongreen); */
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.header-nav-row {
+		display: flex;
+		justify-content: flex-start;
+
+		.main-nav {
+			display: flex;
+			flex-direction: row;
+			width: 100%;
+			align-items: stretch;
+			gap: 0;
+			> a {
+				flex: 1 1 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: var(--seahawks-white);
+				text-decoration: none;
+				padding: var(--space-m);
+				margin: 0;
+				transition: background 0.2s, color 0.2s;
+				background: var(--seahawks-college-navy);
+				/* High contrast for selected/hover */
+				&.selected,
+				&:hover,
+				&:focus {
+					background: var(--seahawks-white);
+					color: var(--seahawks-dark);
+				}
+			}
+		}
+	}
+
+	.header-tabs-row {
+		background-color: var(--seahawks-white);
+		@media (max-width: 700px) {
+			padding: var(--space-s);
+		}
+		.tab-button {
+			background: var(--seahawks-white);
+			border: none;
+			padding: var(--space) var(--space-xl);
+			cursor: pointer;
+			&.active {
+				background-color: var(--seahawks-navy);
+				color: var(--seahawks-neon-green);
+				font-weight: 700;
+			}
+		}
+
+		@media (max-width: 700px) {
+			.tab-buttons {
+				display: none;
+			}
+			.tab-dropdown {
+				display: block;
+				width: 100%;
+				padding: 0.75rem;
+			}
+		}
+
+		@media (min-width: 701px) {
+			.tab-dropdown {
+				display: none;
+			}
+			.tab-buttons {
+				display: block;
+				display: inline-flex;
+				column-gap: var(--space);
+			}
+		}
 	}
 }
 
-.column {
+main {
+	flex: auto;
+	flex-direction: column;
+	overflow: auto;
+
+	.tab-content {
+		display: none;
+		&.active {
+			display: block;
+		}
+		a.image-link {
+			cursor: pointer;
+			display: inline-block;
+			img {
+				pointer-events: none;
+				/* Prevents the image from capturing the click, so the anchor handles it */
+			}
+		}
+		img.lightbox-trigger {
+			cursor: pointer;
+		}
+	}
+}
+
+.project {
 	display: flex;
 	flex-direction: column;
-	row-gap: 1rem;
-}
-.row {
-	display: flex;
-	flex-direction: row;
-	gap: 1rem;
+	row-gap: var(--space-xl);
+	width: 100%;
+	max-width: 60vw;
+	margin: auto;
+	padding: var(--space-xl) 0 var(--space-xxl);
+
+	@media (max-width: 780px) {
+		max-width: 90vw;
+	}
+
+	.project-header {
+		img {
+			max-width: 90%;
+			max-height: 60vh;
+			flex: 0;
+		}
+		.project-description {
+			flex: 1;
+			min-width: 50%;
+		}
+	}
 }

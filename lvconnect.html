@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<article class="project">
+	<section class="column">
+		<h2>LandVision Connect</h2>
+		<h5>
+			LandVision is a cloud-based mapping application that helps commercial real
+			estate brokers, builders, and developers find their next
+			opportunities.​​​​​​​
+		</h5>
+	</section>
+	<section class="project-header row wrap justify-center">
+		<img
+			src="./images/lv-connect/main.png"
+			alt="LandVision Connect Screenshot"
+			class="lightbox-trigger"
+		/>
+		<section class="project-description column">
+			<span>
+				<label>Year</label>
+				<h5>2017</h5>
+			</span>
+			<span>
+				<label>Role</label>
+				<h5>Design Lead / UI Engineer</h5>
+			</span>
+			<span>
+				<label>Team</label>
+				<h5>Myself and a Lead Developer</h5>
+			</span>
+			<h6>
+				The company's flagship product was an established SaaS application that
+				had existed on the desktop for many years.
+			</h6>
+			<h6>
+				This project was initiated to leverage mobile technology to provide
+				users with access to their data while in the field and allow them to
+				capture and sync their own data (notes, photos, etc.) for use within the
+				desktop product.
+			</h6>
+		</section>
+	</section>
+	<section class="column">
+		<h5>
+			The project began life in 2013 as 'The Broker App' before being put on
+			hold and picked up again for a 2017 release. The initial concept was to
+			create a product that would serve as a spatially-aware CRM (customer
+			relationship management) tool, allowing brokers to associate locations
+			with their contacts and add insights during site visits.
+		</h5>
+	</section>
+	<section class="column">
+		<h5>
+			I sketched some screens on the back of index cards to account for the
+			primary data elements (locations, contacts), the container that linked
+			them (project), and the child elements that would belong to each (notes).
+			The index cards were photographed and added to a Marvel prototype for
+			review.
+		</h5>
+	</section>
+	<div>
+		<img
+			src="./images/lv-connect/wires.png"
+			alt="Wires Screenshot"
+			class="lightbox-trigger"
+			width="100%"
+		/>
+		<h6 class="is-centered">
+			Original paper-prototype (Main screen, Contact, Location, Project, Notes)
+		</h6>
+	</div>
+	<section class="column">
+		<h5>
+			After review, the decision was made to simplify things by removing the
+			concept of 'Project'. The application become more property-focused with
+			the intent to allow the user to create/import lists of properties and
+			contacts, define associations between them, and add notes and media.
+		</h5>
+	</section>
+	<section class="column">
+		<h5>
+			Also, around this time, I had began work on Digital Map Products' initial
+			UI Library. Typography, Color Palettes, and Iconography were being
+			defined. I started working with SASS to create modular CSS that could be
+			more easily maintained than image assets. Google's Material had just been
+			released and card-based interfaces were becoming popular. The 2nd
+			iteration was created using HTML and the new CSS.
+		</h5>
+	</section>
+	<div>
+		<img
+			src="./images/lv-connect/lofi-1.png"
+			alt="Lo Fidelity 1 Screenshot"
+			class="lightbox-trigger"
+			width="100%"
+		/>
+		<h6 class="is-centered">
+			HTML templates using CSS compiled from SASS partials
+		</h6>
+	</div>
+	<section class="column">
+		<h5>
+			After incorporating feedback received on the second iteration from
+			engineering and from existing LandVision customers, development began. The
+			completed product was released to select customers to gather feedback on
+			performance and usability. Ultimately, all follow-up work was placed on
+			hold until 2017. By then, the UI library had evolved and been tested in
+			production with other projects. The goal and design of the product were
+			largely unchanged save for additional functionality around managing and
+			syncing the user's data.
+		</h5>
+	</section>
+	<section class="column">
+		<h5>
+			I worked on the 1.0.0 release with a team comprised of a lead developer
+			and product manager to develop the production templates below. PhoneGap
+			was used to access native features on both iOS and Android releases. For
+			debugging of presentational elements, I used Chrome's Inspector, XCode,
+			and Ghostlab.
+		</h5>
+	</section>
+	<div>
+		<img
+			src="./images/lv-connect/hifi-1.png"
+			alt="Hi Fidelity 1 Screenshot"
+			class="lightbox-trigger"
+			width="100%"
+		/>
+		<h6 class="is-centered">
+			Home Screen, Location Summary, Layers UI, App Menu
+		</h6>
+	</div>
+	<div>
+		<img
+			src="./images/lv-connect/hifi-2.png"
+			alt="Hi Fidelity 2 Screenshot"
+			class="lightbox-trigger"
+			width="100%"
+		/>
+		<h6 class="is-centered">
+			Property Detail Screens, Saved Sites, Contacts, Notes, and Media
+		</h6>
+	</div>
+	<section class="column">
+		<h3>What I Learned</h3>
+		<h5>
+			As this project was completed over 2 phases that spanned multiple years, I
+			was able to gain some perspective regarding tooling and process.
+		</h5>
+		<h5>
+			Having the presence of a product manager helped the second phase progress
+			more efficiently as there was a better understanding of the user stories
+			being addressed and better control over project scope. This project
+			prompted me to move to code for complex prototyping where adaptive layout
+			and state management can be more easily achieved. For a standalone project
+			of this scope, compiling CSS from SASS partials was an effective choice as
+			the scale of the application wasn't going to change significantly over
+			time.
+		</h5>
+		<h5>
+			The biggest challenge with a 'companion' app such as this is the shared
+			back-end API of it's desktop counterpart. Compromises to the design were
+			made to mitigate the performance issues that resulted from the real-time
+			sync of large datasets. Frustrating, yes, but also justification for
+			future re-architecture.
+		</h5>
+	</section>
+</article>

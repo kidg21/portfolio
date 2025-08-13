@@ -2,6 +2,47 @@
 /* -------------------- */
 /* 14px root values */
 
+/* Responsive Minor Third Typographic Scale */
+:root {
+	--font-size-base: 1rem; /* 16px */
+	--font-size-1: 0.889rem; /* ~14.2px */
+	--font-size-2: 1rem; /* 16px */
+	--font-size-3: 1.125rem; /* 18px */
+	--font-size-4: 1.266rem; /* 20.3px */
+	--font-size-5: 1.424rem; /* 22.8px */
+	--font-size-6: 1.602rem; /* 25.6px */
+	--font-size-7: 1.802rem; /* 28.8px */
+	--font-size-8: 2.027rem; /* 32.4px */
+}
+
+@media (max-width: 900px) {
+	:root {
+		--font-size-base: 0.95rem;
+		--font-size-1: 0.85rem;
+		--font-size-2: 0.95rem;
+		--font-size-3: 1.05rem;
+		--font-size-4: 1.18rem;
+		--font-size-5: 1.33rem;
+		--font-size-6: 1.5rem;
+		--font-size-7: 1.7rem;
+		--font-size-8: 1.9rem;
+	}
+}
+
+@media (max-width: 700px) {
+	:root {
+		--font-size-base: 0.9rem;
+		--font-size-1: 0.8rem;
+		--font-size-2: 0.9rem;
+		--font-size-3: 1rem;
+		--font-size-4: 1.1rem;
+		--font-size-5: 1.25rem;
+		--font-size-6: 1.4rem;
+		--font-size-7: 1.55rem;
+		--font-size-8: 1.7rem;
+	}
+}
+
 h1,
 h2,
 h3,
@@ -10,40 +51,41 @@ h5,
 h6 {
 	font-family: "Quicksand", sans-serif;
 	font-weight: 500;
-	/* font-optical-sizing: auto; */
-	/* font-style: normal; */
 	margin: 0;
 }
 
-/* h1 {
-	font-size: clamp(2.5rem, 3vw + 1rem, 3.052rem);
-}
-
-h2 {
-	font-size: clamp(2rem, 2vw + 1rem, 2.441rem);
-}
-
-h3 {
-	font-size: clamp(1.5rem, 2vw + 1rem, 1.953rem);
-}
-
-h4 {
-	font-size: clamp(1.25rem, 3vw + 1rem, 1.563rem);
-}
-
-h5 {
-	font-size: clamp(1rem, 2vw + 1rem, 1.25rem);
-}
-
-h6 {
-	font-size: clamp(0.875rem, 1vw + 1rem, 1rem);
-} */
-
 p {
 	font-family: "Lato", sans-serif;
-	/* font-size: clamp (0.875rem, 1vw + 1rem, 1rem); */
 	font-weight: 400;
 	margin: 0.5em 0;
+}
+
+h1 {
+	font-size: var(--font-size-8);
+}
+h2 {
+	font-size: var(--font-size-7);
+}
+h3 {
+	font-size: var(--font-size-6);
+}
+h4 {
+	font-size: var(--font-size-5);
+}
+h5 {
+	font-size: var(--font-size-4);
+}
+h6 {
+	font-size: var(--font-size-3);
+}
+p,
+li,
+a,
+button,
+input,
+select,
+textarea {
+	font-size: var(--font-size-base);
 }
 
 a,
@@ -77,37 +119,17 @@ a:not([href]):not([tabindex]) {
 }
 
 label {
-	cursor: pointer;
-	/* font-family: @font-headline; */
-	/* font-size: 0.825rem; */
-	font-size: clamp (0.75rem, 1vw + 0.5rem, 0.825rem);
-	font-weight: 700;
 	letter-spacing: 0.5px;
-	margin: 0px;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	user-select: none;
 	white-space: nowrap;
-	/* min-width: fit-content; */
 	min-width: auto;
-	text-align: left;
-
-	span {
-		/* font-size: 0.825em; */
-		font-size: clamp (0.75rem, 1vw + 0.5rem, 0.825rem);
-		margin-left: 0.5em;
-		font-weight: 600;
-	}
 }
 
 caption {
 	font-family: "Quicksand", sans-serif;
 	font-weight: 500;
-	color: red;
-	/* padding: 0; */
 	text-align: start;
-	/* letter-spacing: 0.05em; */
-	line-height: 2;
 }
 
 .ellipsis {
@@ -120,9 +142,4 @@ caption {
 .underline {
 	text-decoration: underline;
 	/* text-underline-position: under; */
-}
-
-hr {
-	height: 1px;
-	/* background-color: @grey-6; */
 }
