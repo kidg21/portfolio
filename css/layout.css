@@ -194,6 +194,7 @@ main {
 	justify-content: center;
 	align-items: flex-start;
 	gap: var(--space-xl);
+	padding-bottom: var(--space);
 }
 
 .project-header img {

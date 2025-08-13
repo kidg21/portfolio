@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<article class="project">
+	<section class="project-intro">
+		<h2>FieldForce</h2>
+		<h5>
+			FieldForce is a mobile app that is used by field technicians to record the
+			activities associated with their daily assigned tasks.
+		</h5>
+	</section>
+	<div class="project-header">
+		<img
+			src="./images/field-force/main.png"
+			alt="FieldForce Screenshot"
+			class="lightbox-trigger"
+		/>
+		<div class="project-description">
+			<span>
+				<label>Year</label>
+				<h5>2019</h5>
+			</span>
+			<span>
+				<label>Role</label>
+				<h5>Design Lead / UI Engineer</h5>
+			</span>
+			<span>
+				<label>Team</label>
+				<h5>Myself, a Product Lead, and a Development Team of 6</h5>
+			</span>
+			<h6>
+				The initial application of FieldForce was designed to assist Mosquito
+				and Vector agencies to control the spread of disease by efficiently
+				assigning technicians to inspect mosquito breeding sites and, if
+				necessary, apply treatment and schedule follow-up visits.
+			</h6>
+			<h6>
+				The application records treatment locations, treatment type, and amount.
+				Workflows, such as spray routes, could be configured for auto-logging
+				and recorded without the end user needing to stop and fill out a series
+				of forms. Voice and Bluetooth button inputs are also supported.
+			</h6>
+		</div>
+	</div>
+	<section class="project-section">
+		<h5>
+			We began this project with a disovery phase where user interviews were
+			conducted. I, along with 2 lead developers spent a week on-site with
+			Orange County Vector Control (CA) observing their work habits and
+			documenting common workflows and persistent pain points. My time was spent
+			in the front office fielding community requests for services, riding
+			shotgun on a sprayroute treating mosquito breeding sites, and collecting
+			samples of mosquito larvae from catch basins to send to the lab for
+			analysis. I also spent time speaking with administrators about their need
+			for improvements in managing workflows within their departments.
+		</h5>
+	</section>
+	<section class="project-section">
+		<h5>
+			From my research, I developed the personas that would be served by the
+			application. I then created sets of user stories for each persona that
+			would be used to design and test against.
+		</h5>
+	</section>
+	<section class="project-section">
+		<h5>
+			My research report can be viewed
+			<a
+				href="./documents/field-force/research-report.pdf"
+				target="_blank"
+			>
+				here
+			</a>
+		</h5>
+	</section>
+	<section class="project-section">
+		<h5>
+			User stories can be viewed
+			<a
+				href="./documents/field-force/user-stories.pdf"
+				target="_blank"
+			>
+				here
+			</a>
+		</h5>
+	</section>
+	<section class="project-section">
+		<h5>
+			During the development of this project, I was also working full-time on
+			the UI Library that I'd begun while working on LandVision Connect. Due to
+			the larger scale and scope of FieldForce, it became a good project with
+			which to test out my approach to UI architecture.
+		</h5>
+	</section>
+	<div class="project-image">
+		<img
+			src="./images/field-force/ui-library.png"
+			alt="UI Library Screenshot"
+			class="lightbox-trigger"
+			width="100%"
+		/>
+		<h6 class="is-centered">
+			UI Library - SASS partials generating global CSS
+		</h6>
+	</div>
+	<section class="project-section">
+		<h5>
+			Final template reference was built in HTML/CSS and re-created using React
+			and Handlebars.js by the development team. I reviewed all presentational
+			templates and elements, making updates to the source files as needed to
+			match the reference designs.
+		</h5>
+	</section>
+	<div class="project-image">
+		<img
+			src="./images/field-force/workflow-1.png"
+			alt="Workflow 1 Screenshot"
+			class="lightbox-trigger"
+			width="100%"
+		/>
+	</div>
+	<section class="project-section">
+		<h3>What I Learned</h3>
+		<h5>
+			Including a dedicated research phase benefitted the entire team's
+			understanding of who our product was for and what we were focused on
+			solving. Defining user stories at the start gives you targets to evaluate
+			against. This persists through the design, development, testing, and
+			positioning of the final product.
+		</h5>
+		<h5>
+			When prototypes and production UI live primarily in code, it can be much
+			simpler to maintain quality and consistency with minimal dependency on
+			engineering.
+		</h5>
+		<h5>
+			That said, on a larger project such as this, it became apparent that
+			separate HTML, CSS, and JS would quickly get out of sync. The lack of a
+			formal review process on presentational components during the development
+			process also didn't help matters. Understanding this, I began to explore
+			new templating libraries with the intent of creating a true design system
+			that would allow for maintenance at a component's source rather than at
+			its multiple outputs.
+		</h5>
+	</section>
+</article>
