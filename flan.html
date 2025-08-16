@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<article class="project">
+	<section class="project-intro">
+		<h2>Design Systems and UI Architecture</h2>
+		<h5>
+			Designing enterprise products at scale requires organization, efficiency,
+			and predictability. I created a design system to provide guidance and
+			establish design principles to our product and development teams.
+		</h5>
+	</section>
+	<section class="project-section">
+		<h3>FLAN Design System</h3>
+		<h5>
+			FLAN is LightBox's Design Language System for products and experiences.
+			With the LightBox Design Language as its foundation, the system consists
+			of working code, design tools, resources, and human interface guidelines.
+		</h5>
+	</section>
+	<div class="project-image">
+		<img
+			src="./images/flan/flan-template.png"
+			alt="FLAN Template Screenshot"
+			class="lightbox-trigger"
+			width="100%"
+		/>
+		<h6 class="is-centered"
+			>The main Property view for LightBox's initial product launch...built
+			entirely from components.</h6
+		>
+	</div>
+	<div class="project-header">
+		<div class="project-description">
+			<span>
+				<label>Year</label>
+				<h5>2020</h5>
+			</span>
+			<span>
+				<label>Role</label>
+				<h5>Design Lead / Lead UI Engineer</h5>
+			</span>
+			<span>
+				<label>Team</label>
+				<h5>
+					Myself, a Senior Designer, 2 principle developers who contributed to
+					code reviews, Javascript best practices, component testing, and
+					application build and deployment processes.
+				</h5>
+			</span>
+			<h6>
+				FLAN started in February of 2018 as a front-end platform for the next
+				generation of Digital Map Products' application suite. We altered course
+				during the summer of 2018 when DMP was acquired by LightBox and the
+				focus shifted to creating a design system that could be used across the
+				entire organization.
+			</h6>
+			<h6>
+				FLAN includes application theming capabilities, responsive flex layout,
+				and accessibily designed components. Based off the principles of atomic
+				design, FLAN provides the basic building blocks of a User Interface. Our
+				Component System is organized into atoms, blocks, elements, layouts, and
+				templates. Additionally this system showcases our Design Guidelines,
+				Colors, and Icon Library.
+			</h6>
+			<h6>
+				The Storybook for this system can be accessed
+				<a
+					href="https://kidg21.github.io/storybook/index.html?path=/story/design-guidelines-flan-design-system--page"
+					target="_blank"
+				>
+					here
+				</a>
+			</h6>
+			<h6>
+				The GitHub repository it is built from can be accessed
+				<a
+					href="https://github.com/kidg21/flan"
+					target="_blank"
+				>
+					here
+				</a>
+			</h6>
+		</div>
+	</div>
+	<section class="project-section">
+		<h3>Integrating UI into the Build Process</h3>
+		<h5>
+			Managing output files becomes impossible to maintain as products scale. My
+			goal was to integrate our UI into the application build process so that
+			our components could be maintained at a single source. UI development
+			would follow standard development processes and take advantage of
+			version-controlled code repositories following a Git workflow. Peer code
+			reviews along with manual and automated testing of source code would help
+			product teams gain familiarity and confidence with the system while
+			squashing bugs and uncovering edge cases.
+		</h5>
+		<h5>
+			I wrote up a strategy which led to my current approach to UI architecture
+			and build processes
+			<a
+				href="https://docs.google.com/document/d/1Y6t90LXFxrHNxM8biRhe-9UekqrZcNeZU0GgnR3xUrY/edit?usp=sharing"
+				target="_blank"
+			>
+				here.
+			</a>
+		</h5>
+		<caption>
+			(Note: component and element names are specific to the system at the time
+			of this writing but remain largely relevant to my approach today.)
+		</caption>
+	</section>
+	<section class="project-section">
+		<h3>Building the Design System</h3>
+		<h5>
+			This FLAN design system started with myself and a front-end developer
+			researching and testing available tooling for use in building the system.
+			We settled on React for our view library, styled-components was chosen a
+			the CSS-in-JS solution, and Storybook was used for component development
+			and documentation.
+		</h5>
+		<img
+			src="./images/flan/flan-categories.png"
+			alt="FLAN Categories Screenshot"
+			class="lightbox-trigger"
+		/>
+		<h5>
+			We chose to initially build the design system in React rather than in a
+			prototyping tool such as Figma or Invision. This was due to the fact that
+			there was a short turnaround for standing up a front-end system before it
+			was to be used for development of Digital Map Products' mobile spatial
+			platform. With the acquisition by LightBox, our work on the platform led
+			to its use as the base of the company's initial product release.
+		</h5>
+		<h5>
+			My follow-up initiative is to translate the production version of the
+			component library into Figma. Keeping the 'source of truth' in a
+			prototyping environment would allow for design work to take place without
+			the overhead of technical considerations or dependencies. This type of
+			flow would require processes around component requirements, reviews, and
+			versioning. The benefit of such a setup is that a development team could
+			track changes to the system and keep their presentational front-ends in
+			sync regardless of the view library or framework chosen.
+		</h5>
+	</section>
+	<section class="project-section">
+		<h3>Components</h3>
+		<h5>
+			All UI components were written as functional React components making use
+			of React Hooks. The API was designed to export a standard set of semantic
+			properties (React props) for predictability across the library. The intent
+			of the system was to allow for all component variations to be achieved
+			through configuration alone. Customization was possible but discouraged.
+			Custom components, unless a case was made for their inclusion, would need
+			to be maintained outside of the design system.
+		</h5>
+		<h5>
+			Using Storybook as a development environment allowed us to build and test
+			each component in isolation. We could ensure that every component was
+			semantically correct and adaptive across viewports, browsers, and
+			operating systems. Accessibility standards (ARIA and WCAG) could be tested
+			for compliance. Component states could be tested to ensure correct
+			hierarchies and edge cases were easily caught and reviewed. External tools
+			were used for visual regression testing to check that the 'bottom-margin'
+			that was added to the 'Label' component didn't inadvertantly break the
+			'Text Input' component.
+		</h5>
+		<img
+			src="./images/flan/flan-card.png"
+			alt="FLAN Card Screenshot"
+			class="lightbox-trigger"
+			width="100%"
+		/>
+		<h5>
+			Understanding that our software developers were the end-users of the
+			design system gave us insight into what was needed for it to be useful
+			during application development. Onboarding team members turned out to be
+			easier than I anticipated. The software engineers who were early adopters
+			became the biggest evangelists of the system. I would often hear
+			developers calling over their coworkers to show them what the design
+			system could do for them. They would use phrases such as, "...super,
+			easy..." and "That's it, that's all you need to do."
+		</h5>
+	</section>
+	<section class="project-section">
+		<h3>What I Learned</h3>
+		<h5>
+			Building a design system takes a lot of work and requires a great deal of
+			up-front planning. However, the simple fact that all component code lives
+			in a single location makes this approach to UI development infinitely more
+			scalable and maintainable. Constant collaboration with development teams
+			not only helps improve overall quality and consistency but also creates a
+			sense of ownership of the system for those outside the design team.
+		</h5>
+		<h5>
+			Along with the practice of UX Design, the need for Design Systems
+			represents an increased focus on organizational DesignOps. The need for
+			designers and developers to think strategically is apparent. Applying the
+			same user-centered approach to the design of systems and processes that we
+			employ on our customer's experiences will allow design to scale along with
+			the goals of the product organization.
+		</h5>
+		<h5>
+			Having all presentational components flow from a single source is
+			empowering with respect to their reusability across products. It is
+			possible to achieve a high level of flexibility through composition and
+			enhance UI exponentially by introducing new variants to existing elements.
+			A good design system relies on good architecture with each part of the
+			system serving a defined purpose. Understanding how each component serves
+			its purpose and enhances the functions of other parts of the system allows
+			a design system to scale over time while reducing the cost of maintainance
+			of the source.
+		</h5>
+		<h5>
+			The experience of building a design system and thinking about DesignOps
+			has lead me to consider the value of creating a system of UX knowledge in
+			a similar manner. As we accumulate knowlege related to our users and their
+			needs, it would seem prudent to find a way to manage the accumulation of
+			this knowlege so that it can be revised and repurposed. Over time, many of
+			our products will eventually have more in common than not. It would be
+			beneficial to plan for success by building on what we've learned and
+			making a practice of sharing that knowledge throughout the organization.
+		</h5>
+		<div class="project-image">
+			<img
+				src="./images/flan/flan-logo.png"
+				alt="FLAN Logo"
+				width="200"
+				class="lightbox-trigger"
+			/>
+		</div>
+	</section>
+</article>
