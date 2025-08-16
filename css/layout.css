@@ -29,10 +29,11 @@ header {
 .header-top {
 	display: flex;
 	flex-direction: row;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: stretch;
 	flex-wrap: wrap;
 	column-gap: var(--space-xxl);
+	row-gap: var(--space);
 	padding: var(--space-l) var(--space-xl);
 }
 
@@ -62,11 +63,12 @@ header {
 .social-icons {
 	display: flex;
 	flex-direction: row;
-	column-gap: var(--space-xl);
+	column-gap: var(--space-l);
 }
 
 .social-link {
 	color: var(--seahawks-neon-green);
+	color: var(--seahawks-white);
 	text-decoration: none;
 	transition: color 0.2s;
 	background: transparent;
@@ -74,6 +76,7 @@ header {
 
 .social-link:hover {
 	color: var(--seahawks-blue);
+	color: var(--seahawks-neon-green);
 }
 
 /* Header Navigation */

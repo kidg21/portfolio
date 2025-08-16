@@ -1,0 +1,72 @@
+/* Resume specific styles */
+.contact-info {
+	display: flex;
+	gap: var(--space-l);
+	flex-wrap: wrap;
+	margin: var(--space) 0;
+}
+
+.contact-info a {
+	color: var(--seahawks-blue);
+	text-decoration: none;
+	transition: color 0.2s;
+}
+
+.contact-info a:hover {
+	color: var(--seahawks-neon-green);
+}
+
+.experience-item,
+.education-item {
+	margin-bottom: var(--space-xl);
+}
+
+.experience-item h3,
+.education-item h3 {
+	color: var(--seahawks-navy);
+	margin-bottom: var(--space-s);
+}
+
+.role {
+	font-weight: 600;
+	color: var(--seahawks-blue);
+	margin-bottom: var(--space-xxs);
+}
+
+.duration {
+	color: var(--seahawks-college-navy);
+	font-style: italic;
+	margin-bottom: var(--space-xxs);
+}
+
+.location {
+	color: var(--seahawks-college-navy);
+	margin-bottom: var(--space-m);
+}
+
+.experience-item ul {
+	list-style-type: disc;
+	padding-left: var(--space-xl);
+	margin: var(--space-m) 0;
+}
+
+.experience-item li {
+	margin-bottom: var(--space-s);
+	line-height: 1.5;
+}
+
+.skills-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-m);
+	list-style: none;
+	padding: 0;
+}
+
+.skills-list li {
+	background-color: var(--seahawks-college-navy);
+	color: var(--seahawks-white);
+	padding: var(--space-s) var(--space-m);
+	border-radius: 4px;
+	font-size: var(--font-size-1);
+}
