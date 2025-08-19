@@ -22,7 +22,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	z-index: 1;
-	filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.2));
+	filter: drop-shadow(0 0 0.5rem rgba(0, 0, 0, 0.2));
 }
 
 /* Header Top Section */
@@ -38,6 +38,7 @@ header {
 }
 
 .header-name {
+	width: fit-content;
 	flex: none;
 }
 

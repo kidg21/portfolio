@@ -90,18 +90,15 @@ textarea {
 
 a,
 a:not([href]):not([tabindex]) {
-	/* color: @action-primary; */
 	cursor: pointer;
-	/* font-family: @font-headline; */
 	font-weight: 600;
-	letter-spacing: 0.05rem;
+	letter-spacing: 0.05em;
 	margin: -0.5rem;
 	padding: 0.5rem;
 	text-underline-position: under;
 	width: fit-content;
 
 	&.is-disabled {
-		/* color: @grey-3 !important; */
 		cursor: not-allowed;
 		pointer-events: none;
 		user-select: none;
@@ -119,7 +116,7 @@ a:not([href]):not([tabindex]) {
 }
 
 label {
-	letter-spacing: 0.5px;
+	letter-spacing: 0.03125em;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
@@ -141,5 +138,4 @@ caption {
 
 .underline {
 	text-decoration: underline;
-	/* text-underline-position: under; */
 }

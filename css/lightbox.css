@@ -14,8 +14,8 @@
 .lightbox-img {
 	max-width: 90vw;
 	max-height: 80vh;
-	box-shadow: 0 0 20px #000;
-	border-radius: 8px;
+	box-shadow: 0 0 1.25rem #000;
+	border-radius: 0.5rem;
 }
 .lightbox-close {
 	position: absolute;
