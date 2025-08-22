@@ -180,7 +180,7 @@ main {
 .project-section {
 	display: flex;
 	flex-direction: column;
-	gap: var(--space-l);
+	gap: var(--space-xl);
 }
 
 .project-image {
