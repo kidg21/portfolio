@@ -67,8 +67,8 @@ document.addEventListener("DOMContentLoaded", () => {
 				}
 			}
 
-			// Reset scroll position when switching between Resume and Projects
-			if (target === "resume" || target === "projects") {
+			// Reset scroll position when switching between Profile and Projects
+			if (target === "profile" || target === "projects") {
 				window.scrollTo({ top: 0, behavior: "auto" });
 			}
 		});
@@ -76,9 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Default to showing the first section
 	sections.forEach((section) => (section.style.display = "none"));
-	document.getElementById("resume").style.display = "block";
-	setActiveNav("resume");
-	loadTabContent("resume");
+	document.getElementById("profile").style.display = "block";
+	setActiveNav("profile");
+	loadTabContent("profile");
 	if (headerTabsRow) headerTabsRow.style.display = "none";
 
 	tabButtons.forEach((button) => {

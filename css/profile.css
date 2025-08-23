@@ -1,4 +1,4 @@
-/* Resume specific styles */
+/* Profile specific styles */
 
 .contact-info {
 	display: flex;
@@ -17,15 +17,9 @@
 	color: var(--seahawks-neon-green);
 }
 
-.experience-item,
-.education-item {
-	margin-bottom: var(--space-xl);
-}
-
 .experience-item h3,
 .education-item h3 {
 	color: var(--seahawks-navy);
-	/* margin-bottom: var(--space-s); */
 }
 
 .experience-item h3 {
