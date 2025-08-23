@@ -1,15 +1,15 @@
 :root {
 	/* Seattle Seahawks Color Palette */
-	--seahawks-navy: #1a2634; /* Muted navy */
-	--seahawks-actiongreen: #bfc5c9; /* Muted silver/grey */
-	--seahawks-college-navy: #2d3a4d; /* Muted college navy */
-	--seahawks-wolf-grey: #bfc5c9; /* Muted wolf grey */
-	--seahawks-neon-green: #b3c934; /* Muted neon green, more olive */
-	--seahawks-blue: #4e7c59; /* Muted blue/green */
-	--seahawks-lime: #8fae4d; /* Muted lime */
-	--seahawks-silver: #aeb2b5; /* Muted silver */
-	--seahawks-white: #ffffff;
-	--seahawks-dark: #101820;
+	--seahawks-navy: hsl(210, 32%, 15%);
+	--seahawks-actiongreen: hsl(220, 8%, 77%);
+	--seahawks-college-navy: hsl(215, 16%, 30%);
+	--seahawks-wolf-grey: hsl(220, 8%, 77%);
+	--seahawks-neon-green: hsl(69, 57%, 50%);
+	--seahawks-blue: hsl(140, 22%, 40%);
+	--seahawks-lime: hsl(77, 37%, 49%);
+	--seahawks-silver: hsl(208, 4%, 70%);
+	--seahawks-white: hsl(0, 0%, 100%);
+	--seahawks-dark: hsl(210, 33%, 9%);
 
 	/* Spacing scale: 0.875em base, 4 steps in both directions (shirt sizes) */
 	--space-xxs: 0.328em; /* 0.875em / 2^4 */
