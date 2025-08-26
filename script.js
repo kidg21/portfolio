@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	function setActiveTab(target) {
 		tabContents.forEach((content) => {
 			// Reset scroll position of tab content if it has a template
-			if (content.hasAttribute('data-template')) {
+			if (content.hasAttribute("data-template")) {
 				content.scrollTop = 0;
 			}
 			content.classList.remove("active");
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 			// Reset scroll position of any templates before hiding them
 			sections.forEach((section) => {
-				if (section.hasAttribute('data-template')) {
+				if (section.hasAttribute("data-template")) {
 					section.scrollTop = 0;
 				}
 				section.style.display = "none";

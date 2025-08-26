@@ -61,12 +61,14 @@
 	margin-bottom: var(--space-m);
 }
 
+.summary-item ul,
 .experience-item ul {
 	list-style-type: disc;
 	padding-left: var(--space-xl);
 	margin: var(--space-m) 0;
 }
 
+.summary-item li,
 .experience-item li {
 	margin-bottom: var(--space-s);
 	line-height: 1.5;
