@@ -92,6 +92,7 @@ header {
 	width: 100%;
 	align-items: stretch;
 	gap: 0;
+	background: var(--seahawks-white);
 }
 
 .main-nav-link {
@@ -104,7 +105,6 @@ header {
 	padding: var(--space-m);
 	margin: 0;
 	transition: background 0.2s, color 0.2s;
-	background: var(--seahawks-white);
 	color: hsl(from var(--seahawks-navy) h s l / 0.7);
 }
 

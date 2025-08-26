@@ -12,6 +12,7 @@
 	z-index: 1000;
 }
 .lightbox-img {
+	width: auto;
 	max-width: 90vw;
 	max-height: 80vh;
 	box-shadow: 0 0 1.25rem #000;

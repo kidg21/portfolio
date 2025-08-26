@@ -21,7 +21,6 @@
 			src="./images/flan/flan-template.png"
 			alt="FLAN Template Screenshot"
 			class="lightbox-trigger"
-			width="100%"
 		/>
 		<h6 class="is-centered"
 			>The main Property view for LightBox's initial product launch...built
@@ -55,11 +54,11 @@
 			</h6>
 			<h6>
 				FLAN includes application theming capabilities, responsive flex layout,
-				and accessibily designed components. Based off the principles of atomic
-				design, FLAN provides the basic building blocks of a User Interface. Our
-				Component System is organized into atoms, blocks, elements, layouts, and
-				templates. Additionally this system showcases our Design Guidelines,
-				Colors, and Icon Library.
+				and components designed for accessibility. Based off the principles of
+				atomic design, FLAN provides the basic building blocks of a User
+				Interface. Our Component System is organized into atoms, blocks,
+				elements, layouts, and templates. Additionally, this system showcases
+				our Design Guidelines, Colors, and Icon Library.
 			</h6>
 			<h6>
 				The Storybook for this system can be accessed
@@ -103,17 +102,20 @@
 				here.
 			</a>
 		</h5>
-		<caption>
+		<div
+			role="note"
+			aria-label="Note"
+		>
 			(Note: component and element names are specific to the system at the time
 			of this writing but remain largely relevant to my approach today.)
-		</caption>
+		</div>
 	</section>
 	<section class="project-section">
 		<h3>Building the Design System</h3>
 		<h5>
 			This FLAN design system started with myself and a front-end developer
 			researching and testing available tooling for use in building the system.
-			We settled on React for our view library, styled-components was chosen a
+			We settled on React for our view library, Styled Components was chosen as
 			the CSS-in-JS solution, and Storybook was used for component development
 			and documentation.
 		</h5>
@@ -123,22 +125,18 @@
 			class="lightbox-trigger"
 		/>
 		<h5>
-			We chose to initially build the design system in React rather than in a
-			prototyping tool such as Figma or Invision. This was due to the fact that
-			there was a short turnaround for standing up a front-end system before it
-			was to be used for development of Digital Map Products' mobile spatial
-			platform. With the acquisition by LightBox, our work on the platform led
-			to its use as the base of the company's initial product release.
+			We built the design system in React instead of design tools like Figma
+			because we needed a working front-end system quickly for Digital Map
+			Products' mobile platform. After LightBox acquired us, this work led
+			directly to its use as the base of the company's initial product release.
 		</h5>
 		<h5>
-			My follow-up initiative is to translate the production version of the
-			component library into Figma. Keeping the 'source of truth' in a
-			prototyping environment would allow for design work to take place without
-			the overhead of technical considerations or dependencies. This type of
-			flow would require processes around component requirements, reviews, and
-			versioning. The benefit of such a setup is that a development team could
-			track changes to the system and keep their presentational front-ends in
-			sync regardless of the view library or framework chosen.
+			I'm now translating the production component library into Figma. Moving
+			the 'source of truth' into a prototyping environment enables design work
+			without technical overhead or dependencies. This workflow establishes
+			clear processes for component requirements, reviews, and versioning.
+			Development teams can then track system changes and maintain synchronized
+			presentational front-ends across any view library or framework.
 		</h5>
 	</section>
 	<section class="project-section">
@@ -148,7 +146,8 @@
 			of React Hooks. The API was designed to export a standard set of semantic
 			properties (React props) for predictability across the library. The intent
 			of the system was to allow for all component variations to be achieved
-			through configuration alone. Customization was possible but discouraged.
+			through configuration alone. Customization was possible but discouraged,
+			as it can lead to inconsistencies and increased maintenance overhead.
 			Custom components, unless a case was made for their inclusion, would need
 			to be maintained outside of the design system.
 		</h5>
@@ -167,17 +166,16 @@
 			src="./images/flan/flan-card.png"
 			alt="FLAN Card Screenshot"
 			class="lightbox-trigger"
-			width="100%"
 		/>
 		<h5>
-			Understanding that our software developers were the end-users of the
-			design system gave us insight into what was needed for it to be useful
-			during application development. Onboarding team members turned out to be
-			easier than I anticipated. The software engineers who were early adopters
-			became the biggest evangelists of the system. I would often hear
-			developers calling over their coworkers to show them what the design
-			system could do for them. They would use phrases such as, "...super,
-			easy..." and "That's it, that's all you need to do."
+			Viewing software developers as the end-users of the design system gave us
+			insight into what was needed for it to be useful during application
+			development. Onboarding team members turned out to be easier than I
+			anticipated. The software engineers who were early adopters became the
+			biggest evangelists of the system. I would often hear developers calling
+			over their coworkers to show them what the design system could do for
+			them. They would use phrases such as, "...super, easy..." and "That's it,
+			that's all you need to do."
 		</h5>
 	</section>
 	<section class="project-section">
@@ -206,16 +204,16 @@
 			A good design system relies on good architecture with each part of the
 			system serving a defined purpose. Understanding how each component serves
 			its purpose and enhances the functions of other parts of the system allows
-			a design system to scale over time while reducing the cost of maintainance
+			a design system to scale over time while reducing the cost of maintenance
 			of the source.
 		</h5>
 		<h5>
 			The experience of building a design system and thinking about DesignOps
-			has lead me to consider the value of creating a system of UX knowledge in
-			a similar manner. As we accumulate knowlege related to our users and their
+			has me considering the value of creating a system of UX knowledge in a
+			similar manner. As we accumulate knowledge related to our users and their
 			needs, it would seem prudent to find a way to manage the accumulation of
-			this knowlege so that it can be revised and repurposed. Over time, many of
-			our products will eventually have more in common than not. It would be
+			this knowledge so that it can be revised and repurposed. Over time, many
+			of our products will eventually have more in common than not. It would be
 			beneficial to plan for success by building on what we've learned and
 			making a practice of sharing that knowledge throughout the organization.
 		</h5>
@@ -223,8 +221,8 @@
 			<img
 				src="./images/flan/flan-logo.png"
 				alt="FLAN Logo"
-				width="200"
 				class="lightbox-trigger"
+				style="width: 16rem"
 			/>
 		</div>
 	</section>
