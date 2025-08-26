@@ -84,4 +84,9 @@
 	color: var(--seahawks-neon-green);
 	font-weight: 700;
 	letter-spacing: 0.05em;
+	a {
+		color: inherit;
+		font-size: inherit;
+		text-decoration: none;
+	}
 }
