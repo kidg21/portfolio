@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<style>
+	a {
+		color: blue;
+		text-decoration: none;
+	}
+</style>
 <html lang="en">
 	<head>
 		<title>Greg Person - Principal UX Design Leader</title>
@@ -29,15 +35,24 @@
 		/>
 	</head>
 	<body>
-		<header>
+		<header style="border: 2px solid var(--seahawks-white)">
 			<div class="header-top">
 				<section class="header-name">
 					<h2>Greg Person</h2>
-					<h6 class="highlight wrap-text"> Creative Technologist </h6>
+					<!-- <h6 class="highlight wrap-text"> Creative Technologist </h6> -->
+					<h6 class="highlight">
+						<a href="tel:9495725836">(949) 572-5836</a>
+					</h6>
 				</section>
 				<section class="header-body">
-					<section class="social-links">
-						<div class="social-icons">
+					<section
+						class="social-links"
+						style="row-gap: var(--space-s)"
+					>
+						<div
+							class="social-icons"
+							style="column-gap: var(--space-xl)"
+						>
 							<a
 								href="https://www.linkedin.com/in/greg-person-0500a38/"
 								target="_blank"
@@ -68,13 +83,23 @@
 								></i
 							></a>
 						</div>
-						<h6 class="highlight">
+						<!-- <h6 class="highlight">
 							<a href="tel:9495725836">(949) 572-5836</a>
+						</h6> -->
+						<h6 class="highlight">
+							<a
+								href="https://kidg21.github.io/portfolio/#projects"
+								target="_blank"
+								>View Portfolio</a
+							>
 						</h6>
 					</section>
 				</section>
 			</div>
-			<nav class="header-nav-row">
+			<nav
+				class="header-nav-row"
+				style2="display: none"
+			>
 				<div class="main-nav">
 					<a
 						href="#profile"
@@ -127,6 +152,18 @@
 					>
 						Public Service
 					</button>
+					<button
+						class="tab-button"
+						data-tab="project6"
+					>
+						Community Engagement
+					</button>
+					<button
+						class="tab-button"
+						data-tab="project7"
+					>
+						Visual Design
+					</button>
 				</div>
 				<select
 					id="project-dropdown"
@@ -172,6 +209,16 @@
 					class="tab-content"
 					id="project5"
 					data-template="public-service.html"
+				></div>
+				<div
+					class="tab-content"
+					id="project6"
+					data-template="community-engagement.html"
+				></div>
+				<div
+					class="tab-content"
+					id="project7"
+					data-template="visual-design.html"
 				></div>
 			</section>
 		</main>

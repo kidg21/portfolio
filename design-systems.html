@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<article class="project">
+<article
+	class="project"
+	style="padding-top: var(--space-xxl)"
+>
 	<section class="project-intro">
 		<h2>Design Systems</h2>
 		<h5>
@@ -21,13 +24,17 @@
 			src="./images/flan/flan-template.png"
 			alt="FLAN Template Screenshot"
 			class="lightbox-trigger"
+			style="width: 90%; margin: 0 auto"
 		/>
 		<h6 class="is-centered"
 			>The main Property view for LightBox's initial product launch...built
 			entirely from components.</h6
 		>
 	</div>
-	<div class="project-header">
+	<div
+		class="project-header"
+		style="page-break-after: always"
+	>
 		<div class="project-description">
 			<span>
 				<label>Year</label>
@@ -80,7 +87,10 @@
 			</h6>
 		</div>
 	</div>
-	<section class="project-section">
+	<section
+		class="project-section"
+		style="padding-top: var(--space-xxl)"
+	>
 		<h3>Integrating UI into the Build Process</h3>
 		<h5>
 			Managing output files becomes impossible to maintain as products scale. My
@@ -141,7 +151,7 @@
 	</section>
 	<section class="project-section">
 		<h3>Components</h3>
-		<h5>
+		<h5 style="page-break-after: always">
 			All UI components were written as functional React components making use
 			of React Hooks. The API was designed to export a standard set of semantic
 			properties (React props) for predictability across the library. The intent
@@ -151,7 +161,7 @@
 			Custom components, unless a case was made for their inclusion, would need
 			to be maintained outside of the design system.
 		</h5>
-		<h5>
+		<h5 style="padding-top: var(--space-xxl)">
 			Using Storybook as a development environment allowed us to build and test
 			each component in isolation. We could ensure that every component was
 			semantically correct and adaptive across viewports, browsers, and
@@ -159,13 +169,14 @@
 			for compliance. Component states could be tested to ensure correct
 			hierarchies and edge cases were easily caught and reviewed. External tools
 			were used for visual regression testing to check that the 'bottom-margin'
-			that was added to the 'Label' component didn't inadvertantly break the
+			that was added to the 'Label' component didn't inadvertently break the
 			'Text Input' component.
 		</h5>
 		<img
 			src="./images/flan/flan-card.png"
 			alt="FLAN Card Screenshot"
 			class="lightbox-trigger"
+			style="width: 90%; margin: 0 auto"
 		/>
 		<h5>
 			Viewing software developers as the end-users of the design system gave us
@@ -180,7 +191,7 @@
 	</section>
 	<section class="project-section">
 		<h3>What I Learned</h3>
-		<h5>
+		<h5 style="page-break-after: always">
 			Building a design system takes a lot of work and requires a great deal of
 			up-front planning. However, the simple fact that all component code lives
 			in a single location makes this approach to UI development infinitely more
@@ -188,7 +199,7 @@
 			not only helps improve overall quality and consistency but also creates a
 			sense of ownership of the system for those outside the design team.
 		</h5>
-		<h5>
+		<h5 style="padding-top: var(--space-xxl)">
 			Along with the practice of UX Design, the need for Design Systems
 			represents an increased focus on organizational DesignOps. The need for
 			designers and developers to think strategically is apparent. Applying the
