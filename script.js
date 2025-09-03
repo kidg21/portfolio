@@ -6,6 +6,17 @@ document.addEventListener("DOMContentLoaded", () => {
 	const tabDropdown = document.querySelector(".tab-dropdown");
 	const headerTabsRow = document.getElementById("header-tabs-row");
 
+	// Google Analytics helper function
+	function trackEvent(action, category, label = null, value = null) {
+		if (typeof gtag !== "undefined") {
+			gtag("event", action, {
+				event_category: category,
+				event_label: label,
+				value: value,
+			});
+		}
+	}
+
 	// Load external template into tab-content or section
 	function loadTabContent(tabId) {
 		const tab = document.getElementById(tabId);
@@ -17,6 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
 				.then((html) => {
 					tab.innerHTML = html;
 					tab.setAttribute("data-loaded", "true");
+					// Track template load
+					trackEvent("template_loaded", "navigation", tabId);
 				});
 		}
 	}
@@ -51,6 +64,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	navLinks.forEach((link) => {
 		link.addEventListener("click", () => {
 			const target = link.getAttribute("data-tab");
+
+			// Track main navigation clicks
+			trackEvent("click", "main_navigation", target);
 
 			// Reset scroll position of any templates before hiding them
 			sections.forEach((section) => {
@@ -92,6 +108,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	tabButtons.forEach((button) => {
 		button.addEventListener("click", () => {
 			const target = button.getAttribute("data-tab");
+
+			// Track project tab clicks
+			trackEvent("click", "project_tabs", target);
+
 			setActiveTab(target);
 			if (tabDropdown) tabDropdown.value = target;
 		});
@@ -100,6 +120,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	if (tabDropdown) {
 		tabDropdown.addEventListener("change", (e) => {
 			const target = e.target.value;
+
+			// Track dropdown selection
+			trackEvent("change", "project_dropdown", target);
+
 			setActiveTab(target);
 		});
 	}
@@ -114,20 +138,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	document.body.addEventListener("click", function (e) {
 		if (e.target.tagName === "IMG" && e.target.closest(".tab-content")) {
+			// Track lightbox image clicks
+			trackEvent("click", "lightbox", "image_view");
+
 			lightboxImg.src = e.target.src;
 			lightbox.style.display = "flex";
 		}
 	});
 
 	lightboxClose.addEventListener("click", function () {
+		// Track lightbox close
+		trackEvent("click", "lightbox", "close");
+
 		lightbox.style.display = "none";
 		lightboxImg.src = "";
 	});
 
 	lightbox.addEventListener("click", function (e) {
 		if (e.target === lightbox) {
+			// Track lightbox background close
+			trackEvent("click", "lightbox", "background_close");
+
 			lightbox.style.display = "none";
 			lightboxImg.src = "";
 		}
 	});
+
+	// Track social media clicks
+	document.addEventListener("click", function (e) {
+		if (e.target.closest(".social-link")) {
+			const link = e.target.closest(".social-link");
+			const href = link.getAttribute("href");
+			let platform = "unknown";
+
+			if (href.includes("linkedin")) platform = "linkedin";
+			else if (href.includes("github")) platform = "github";
+			else if (href.includes("mailto")) platform = "email";
+			else if (href.includes("tel")) platform = "phone";
+
+			trackEvent("click", "social_media", platform);
+		}
+	});
+
+	// Track page load
+	trackEvent("page_view", "navigation", "initial_load");
 });
